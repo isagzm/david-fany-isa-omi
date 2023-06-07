@@ -17,4 +17,13 @@ describe("Character", () => {
 
     expect(character.isAlive()).toBe(true);
   });
+
+  it("recives damage when attacked", () => {
+    const attacker = new Character();
+    const defender = new Character();
+
+    attacker.attack(defender, 80);
+
+    expect(defender.getHealth()).toBe(920);
+  });
 });
