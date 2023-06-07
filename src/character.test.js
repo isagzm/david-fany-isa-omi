@@ -21,9 +21,15 @@ describe("Character", () => {
   it("recives damage when attacked", () => {
     const attacker = new Character();
     const defender = new Character();
-
     attacker.attack(defender, 80);
-
     expect(defender.getHealth()).toBe(920);
   });
+});
+
+it("when health becomes 0, the character dies", () => {
+  const attacker = new Character();
+  const defender = new Character();
+
+  attacker.attack(defender, 1000);
+  expect(defender.getHealth()).toBe(0);
 });
