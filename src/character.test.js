@@ -6,4 +6,15 @@ describe("Character", () => {
     const character = new Character();
     expect(character.getHealth()).toBe(1000);
   });
+
+  it("starts with level 1", () => {
+    const character = new Character();
+    expect(character.getLevel()).toBe(1);
+  });
+
+  it("starts alive", () => {
+    const character = new Character();
+
+    expect(character.isAlive()).toBe(true);
+  });
 });
